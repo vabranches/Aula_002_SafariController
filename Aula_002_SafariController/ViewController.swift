@@ -7,19 +7,19 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func abrirSafari(_ sender: UIButton) {
+        let meuSafari = SFSafariViewController(url: URL(string: "http://santander.com.br")!)
+        present(meuSafari, animated: true)
     }
-
 
 }
 
